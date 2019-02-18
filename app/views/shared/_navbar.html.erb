@@ -24,12 +24,15 @@
             <li><a href="#">Something else here</a></li>
             <li class="divider"></li>
             <li><a href="#">Separated link</a></li>
+            <% if user_signed_in? %>
             <li class="divider"></li>
-            <li><a href="#">One more separated link</a></li>
+            <li>
+              <%= link_to 'Cerrar Sesión', destroy_user_session_path, method: :delete%>
+              </li>
+            <% end %>
           </ul>
         </li>
       </ul>
     </div>
   </div>
 </nav>
-
